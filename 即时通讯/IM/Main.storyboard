@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Table View Controller - 微信-->
         <scene sceneID="9gB-5K-iig">
             <objects>
                 <tableViewController id="dck-4w-x2Q" sceneMemberID="viewController">
@@ -27,13 +27,13 @@
                             <outlet property="delegate" destination="dck-4w-x2Q" id="SCd-8Q-8iu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mi6-6H-pRk"/>
+                    <navigationItem key="navigationItem" title="微信" id="mi6-6H-pRk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGw-Xt-czC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726" y="-327"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - 帅-->
         <scene sceneID="9pI-D8-Im9">
             <objects>
                 <tableViewController id="IdU-iW-fFw" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                             <outlet property="delegate" destination="IdU-iW-fFw" id="1qB-qV-Jtp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wox-fL-zSs"/>
+                    <navigationItem key="navigationItem" title="帅" id="Wox-fL-zSs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tqt-ze-Lbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1281" y="333"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Card View Controller - 我的名片-->
         <scene sceneID="WfT-AL-dXj">
             <objects>
-                <tableViewController id="mfO-do-Fgp" sceneMemberID="viewController">
+                <tableViewController id="mfO-do-Fgp" customClass="VCardViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="frr-CZ-9uU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,13 @@
                             <outlet property="delegate" destination="mfO-do-Fgp" id="Blr-o9-BSj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ohr-Bd-lWS"/>
+                    <navigationItem key="navigationItem" title="我的名片" id="ohr-Bd-lWS">
+                        <barButtonItem key="rightBarButtonItem" title="注销" id="103-UH-w83">
+                            <connections>
+                                <action selector="logout:" destination="mfO-do-Fgp" id="FEu-pA-Cqk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1y-lK-2fG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "DDLog.h"
-#import "DDTTYLogger.h"
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
+#define kMainStroyboardName     @"Main"
+#define kLoginStoryboardName    @"Login"
+
+
+// 赋值语句不能够写在.h中，只能写在.m中
+// 使用此种方式，可以保证常量字符串在内存中有且仅有一个地址
+NSString * const kXMPPLoginUserNameKey = @"xmppUserName";
+NSString * const kXMPPLoginPasswordKey = @"xmppPassword";
+NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
+
+
 @interface AppDelegate()<XMPPStreamDelegate>
 {
     LoginFailedBlock _faildBlock;
@@ -45,20 +54,30 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 
 #pragma mark - 切换Storyboard
-- (void)showStoryboard
+- (void)showStoryboardWithBoardName:(NSString *)boardName
 {
+    
+    _faildBlock = nil;
+    
     // 实例化MainStoryboard
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:boardName bundle:nil];
     // 在主线程中更新Storyboard
     dispatch_async(dispatch_get_main_queue(), ^{
         
         self.window.rootViewController = storyboard.instantiateInitialViewController;
+   
+        if (!_window.isKeyWindow) {
+            [_window makeKeyAndVisible];
+        }
     });
     
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // 实例化window
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
     // 设置颜色日志
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
@@ -93,6 +112,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [self connect];
 }
 
+#pragma mark - 注销
+- (void)logout
+{
+    [self disconnect];
+    [self showStoryboardWithBoardName:kLoginStoryboardName];
+}
+
 #pragma mark - XMPP 相关方法
 - (void)setupXmppStream
 {
@@ -111,10 +137,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *hostName = [defaults stringForKey:KXMPPLoginHostNameKey];
+    NSString *hostName = [defaults stringForKey:kXMPPLoginHostNameKey];
     NSString *userName = [defaults stringForKey:kXMPPLoginUserNameKey];
     
     if (hostName.length == 0 || userName.length == 0) {
+        
+        [self showStoryboardWithBoardName:kLoginStoryboardName];
         return;
     }
     
@@ -188,7 +216,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)xmppStreamDidRegister:(XMPPStream *)sender
 {
     [self goOnline];
-    [self showStoryboard];
+    [self showStoryboardWithBoardName:kMainStroyboardName];
 }
 #pragma mark 注册失败
 - (void)xmppStream:(XMPPStream *)sender didNotRegister:(DDXMLElement *)error
@@ -209,7 +237,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [self goOnline];
     
     // 显示Main.storyboard
-    [self showStoryboard];
+    [self showStoryboardWithBoardName:kMainStroyboardName];
 }
 
 #pragma mark 用户名或者密码错误
@@ -226,7 +254,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:kXMPPLoginUserNameKey];
     [defaults removeObjectForKey:kXMPPLoginPasswordKey];
-    [defaults removeObjectForKey:KXMPPLoginHostNameKey];
+    [defaults removeObjectForKey:kXMPPLoginHostNameKey];
     [defaults synchronize];
 }
 

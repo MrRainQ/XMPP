@@ -8,7 +8,11 @@
 
 #import "LoginViewController.h"
 #import "AppDelegate.h"
-#import "NSString+Helper.h"
+
+extern NSString * const kXMPPLoginUserNameKey;
+extern NSString * const kXMPPLoginPasswordKey;
+extern NSString * const kXMPPLoginHostNameKey;
+
 @interface LoginViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
@@ -45,7 +49,7 @@
     
     _usernameText.text = [defaults stringForKey:kXMPPLoginUserNameKey];
     _passwordText.text = [defaults stringForKey:kXMPPLoginPasswordKey];
-    _hostnameText.text = [defaults stringForKey:KXMPPLoginHostNameKey];
+    _hostnameText.text = [defaults stringForKey:kXMPPLoginHostNameKey];
 
     if (_usernameText.text.length == 0) {
         [_usernameText becomeFirstResponder];
@@ -90,14 +94,13 @@
     
     [defaults setObject:userName forKey:kXMPPLoginUserNameKey];
     [defaults setObject:password forKey:kXMPPLoginPasswordKey];
-    [defaults setObject:hostName forKey:KXMPPLoginHostNameKey];
+    [defaults setObject:hostName forKey:kXMPPLoginHostNameKey];
     
     [defaults synchronize];
     
     // 3. 获取AppDelegate
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    delegate.isRegisterUser = sender.tag;
-    [delegate connectOnFailed:^(kLoginErrorType type) {
+    xmppDelegate.isRegisterUser = sender.tag;
+    [xmppDelegate connectOnFailed:^(kLoginErrorType type) {
         NSString *msg = nil;
         if (type == kLoginLogonError) {
             msg = @"用户名或密码错误";

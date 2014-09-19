@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "XMPPFramework.h"
 
-#define kXMPPLoginUserNameKey @"xmppUserName"
-#define kXMPPLoginPasswordKey @"xmppPassword"
-#define KXMPPLoginHostNameKey @"xmppHostName"
+// 全局AppDelegate代理的宏
+#define xmppDelegate    ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 typedef enum {
     kLoginLogonError,       // 无法连接
@@ -31,8 +30,20 @@ typedef void(^LoginFailedBlock)(kLoginErrorType type);
  */
 @property (nonatomic,strong,readonly) XMPPStream *xmppStream;
 
-
+/**
+ *  注册用户标记
+ */
 @property (nonatomic,assign) BOOL isRegisterUser;
 
+
+/**
+ *  有登录界面调用，登录到服务器
+ */
 - (void)connectOnFailed:(LoginFailedBlock)falid;
+
+/**
+ *  用户注销
+ */
+- (void)logout;
+
 @end

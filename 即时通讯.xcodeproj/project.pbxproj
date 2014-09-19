@@ -19,6 +19,7 @@
 		CB724F9E19CAD6AB001A6298 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */; };
 		CB724F9F19CAD6AB001A6298 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB724F9719CAD6AB001A6298 /* README.txt */; };
 		CBB4F1A019CBCF52001BF2C2 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */; };
+		CBB4F1A519CBFA35001BF2C2 /* VCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F1A419CBFA35001BF2C2 /* VCardViewController.m */; };
 		CBDBBA3219CAC8A40026A71F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3119CAC8A40026A71F /* Foundation.framework */; };
 		CBDBBA3419CAC8A40026A71F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */; };
 		CBDBBA3619CAC8A40026A71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3519CAC8A40026A71F /* UIKit.framework */; };
@@ -189,6 +190,9 @@
 		CB724F9719CAD6AB001A6298 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CBB4F19E19CBCF52001BF2C2 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		CBB4F1A319CBFA35001BF2C2 /* VCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCardViewController.h; sourceTree = "<group>"; };
+		CBB4F1A419CBFA35001BF2C2 /* VCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCardViewController.m; sourceTree = "<group>"; };
+		CBB4F1E119CBFEC3001BF2C2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CBDBBA2E19CAC8A40026A71F /* 即时通讯.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "即时通讯.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBBA3119CAC8A40026A71F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -494,6 +498,8 @@
 			isa = PBXGroup;
 			children = (
 				CB10863819CAFFB600EF2C13 /* Main.storyboard */,
+				CBB4F1A319CBFA35001BF2C2 /* VCardViewController.h */,
+				CBB4F1A419CBFA35001BF2C2 /* VCardViewController.m */,
 			);
 			path = IM;
 			sourceTree = "<group>";
@@ -589,6 +595,7 @@
 				CBDBBA6619CAC9060026A71F /* Libs */,
 				CBDBBA4019CAC8A40026A71F /* AppDelegate.h */,
 				CBDBBA4119CAC8A40026A71F /* AppDelegate.m */,
+				CBB4F1E119CBFEC3001BF2C2 /* Common.h */,
 				CBDBBA4919CAC8A40026A71F /* Images.xcassets */,
 				CBDBBA3819CAC8A40026A71F /* Supporting Files */,
 			);
@@ -1600,6 +1607,7 @@
 				CBDBBC2219CACA920026A71F /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				CBDBBC1619CACA920026A71F /* XMPPIQ+XEP_0060.m in Sources */,
 				CBDBBBFD19CACA920026A71F /* XMPPRoomHybrid.xcdatamodeld in Sources */,
+				CBB4F1A519CBFA35001BF2C2 /* VCardViewController.m in Sources */,
 				CBDBBAF919CACA3D0026A71F /* XMPPSRVResolver.m in Sources */,
 				CBDBBA3E19CAC8A40026A71F /* main.m in Sources */,
 				CBDBBC1319CACA920026A71F /* XMPPvCardTempTel.m in Sources */,
