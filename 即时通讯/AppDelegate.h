@@ -13,6 +13,14 @@
 #define kXMPPLoginPasswordKey @"xmppPassword"
 #define KXMPPLoginHostNameKey @"xmppHostName"
 
+typedef enum {
+    kLoginLogonError,       // 无法连接
+    kLoginNotConnection,    // 用户名或密码错误
+    kLoginRegisterError     // 用户注册失败
+}kLoginErrorType;
+
+typedef void(^LoginFailedBlock)(kLoginErrorType type);
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -23,5 +31,8 @@
  */
 @property (nonatomic,strong,readonly) XMPPStream *xmppStream;
 
-- (void)connectToHost;
+
+@property (nonatomic,assign) BOOL isRegisterUser;
+
+- (void)connectOnFailed:(LoginFailedBlock)falid;
 @end

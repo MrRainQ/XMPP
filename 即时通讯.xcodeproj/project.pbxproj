@@ -18,6 +18,7 @@
 		CB724F9D19CAD6AB001A6298 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9419CAD6AB001A6298 /* ContextFilterLogFormatter.m */; };
 		CB724F9E19CAD6AB001A6298 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */; };
 		CB724F9F19CAD6AB001A6298 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB724F9719CAD6AB001A6298 /* README.txt */; };
+		CBB4F1A019CBCF52001BF2C2 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */; };
 		CBDBBA3219CAC8A40026A71F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3119CAC8A40026A71F /* Foundation.framework */; };
 		CBDBBA3419CAC8A40026A71F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */; };
 		CBDBBA3619CAC8A40026A71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3519CAC8A40026A71F /* UIKit.framework */; };
@@ -186,6 +187,8 @@
 		CB724F9519CAD6AB001A6298 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		CB724F9719CAD6AB001A6298 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		CBB4F19E19CBCF52001BF2C2 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		CBDBBA2E19CAC8A40026A71F /* 即时通讯.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "即时通讯.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBBA3119CAC8A40026A71F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -535,6 +538,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CBB4F19D19CBCF33001BF2C2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CBB4F19E19CBCF52001BF2C2 /* NSString+Helper.h */,
+				CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		CBDBBA2519CAC8A40026A71F = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +627,7 @@
 		CBDBBA6619CAC9060026A71F /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				CBB4F19D19CBCF33001BF2C2 /* Categories */,
 				CBDBBA6719CAC9060026A71F /* XMPP */,
 			);
 			path = Libs;
@@ -1602,6 +1615,7 @@
 				CBDBBAF019CACA3D0026A71F /* XMPPMessage.m in Sources */,
 				CBDBBC0B19CACA920026A71F /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
 				CBDBBC2E19CACA920026A71F /* XMPPMessage+XEP_0184.m in Sources */,
+				CBB4F1A019CBCF52001BF2C2 /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
