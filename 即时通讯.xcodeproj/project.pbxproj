@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB10863919CAFFB600EF2C13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB10863819CAFFB600EF2C13 /* Main.storyboard */; };
+		CB10863B19CAFFBE00EF2C13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB10863A19CAFFBE00EF2C13 /* Login.storyboard */; };
+		CB10863E19CB02CF00EF2C13 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB10863D19CB02CF00EF2C13 /* LoginViewController.m */; };
+		CB724F9819CAD6AB001A6298 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8919CAD6AB001A6298 /* DDAbstractDatabaseLogger.m */; };
+		CB724F9919CAD6AB001A6298 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8B19CAD6AB001A6298 /* DDASLLogger.m */; };
+		CB724F9A19CAD6AB001A6298 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8D19CAD6AB001A6298 /* DDFileLogger.m */; };
+		CB724F9B19CAD6AB001A6298 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8F19CAD6AB001A6298 /* DDLog.m */; };
+		CB724F9C19CAD6AB001A6298 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9119CAD6AB001A6298 /* DDTTYLogger.m */; };
+		CB724F9D19CAD6AB001A6298 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9419CAD6AB001A6298 /* ContextFilterLogFormatter.m */; };
+		CB724F9E19CAD6AB001A6298 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */; };
+		CB724F9F19CAD6AB001A6298 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB724F9719CAD6AB001A6298 /* README.txt */; };
 		CBDBBA3219CAC8A40026A71F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3119CAC8A40026A71F /* Foundation.framework */; };
 		CBDBBA3419CAC8A40026A71F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */; };
 		CBDBBA3619CAC8A40026A71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3519CAC8A40026A71F /* UIKit.framework */; };
 		CBDBBA3C19CAC8A40026A71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDBBA3A19CAC8A40026A71F /* InfoPlist.strings */; };
 		CBDBBA3E19CAC8A40026A71F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA3D19CAC8A40026A71F /* main.m */; };
 		CBDBBA4219CAC8A40026A71F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA4119CAC8A40026A71F /* AppDelegate.m */; };
-		CBDBBA4519CAC8A40026A71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDBBA4319CAC8A40026A71F /* Main.storyboard */; };
-		CBDBBA4819CAC8A40026A71F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA4719CAC8A40026A71F /* ViewController.m */; };
 		CBDBBA4A19CAC8A40026A71F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDBBA4919CAC8A40026A71F /* Images.xcassets */; };
 		CBDBBA5119CAC8A40026A71F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA5019CAC8A40026A71F /* XCTest.framework */; };
 		CBDBBA5219CAC8A40026A71F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3119CAC8A40026A71F /* Foundation.framework */; };
 		CBDBBA5319CAC8A40026A71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3519CAC8A40026A71F /* UIKit.framework */; };
 		CBDBBA5B19CAC8A40026A71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDBBA5919CAC8A40026A71F /* InfoPlist.strings */; };
 		CBDBBA5D19CAC8A40026A71F /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA5C19CAC8A40026A71F /* ____Tests.m */; };
-		CBDBBA7A19CAC91F0026A71F /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA6B19CAC91F0026A71F /* DDAbstractDatabaseLogger.m */; };
-		CBDBBA7B19CAC91F0026A71F /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA6D19CAC91F0026A71F /* DDASLLogger.m */; };
-		CBDBBA7C19CAC91F0026A71F /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA6F19CAC91F0026A71F /* DDFileLogger.m */; };
-		CBDBBA7D19CAC91F0026A71F /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA7119CAC91F0026A71F /* DDLog.m */; };
-		CBDBBA7E19CAC91F0026A71F /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA7319CAC91F0026A71F /* DDTTYLogger.m */; };
-		CBDBBA7F19CAC91F0026A71F /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA7619CAC91F0026A71F /* ContextFilterLogFormatter.m */; };
-		CBDBBA8019CAC91F0026A71F /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA7819CAC91F0026A71F /* DispatchQueueLogFormatter.m */; };
-		CBDBBA8119CAC91F0026A71F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CBDBBA7919CAC91F0026A71F /* README.txt */; };
 		CBDBBA8519CAC9520026A71F /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDBBA8419CAC9520026A71F /* GCDAsyncSocket.m */; };
 		CBDBBA8719CAC9600026A71F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA8619CAC9600026A71F /* Security.framework */; };
 		CBDBBA8919CAC9680026A71F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA8819CAC9680026A71F /* CFNetwork.framework */; };
@@ -166,6 +167,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB10863819CAFFB600EF2C13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CB10863A19CAFFBE00EF2C13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CB10863C19CB02CF00EF2C13 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CB10863D19CB02CF00EF2C13 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CB724F8819CAD6AB001A6298 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		CB724F8919CAD6AB001A6298 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		CB724F8A19CAD6AB001A6298 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		CB724F8B19CAD6AB001A6298 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		CB724F8C19CAD6AB001A6298 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		CB724F8D19CAD6AB001A6298 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		CB724F8E19CAD6AB001A6298 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		CB724F8F19CAD6AB001A6298 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		CB724F9019CAD6AB001A6298 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		CB724F9119CAD6AB001A6298 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		CB724F9319CAD6AB001A6298 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		CB724F9419CAD6AB001A6298 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		CB724F9519CAD6AB001A6298 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		CB724F9719CAD6AB001A6298 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CBDBBA2E19CAC8A40026A71F /* 即时通讯.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "即时通讯.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBBA3119CAC8A40026A71F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,30 +196,12 @@
 		CBDBBA3F19CAC8A40026A71F /* 即时通讯-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "即时通讯-Prefix.pch"; sourceTree = "<group>"; };
 		CBDBBA4019CAC8A40026A71F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CBDBBA4119CAC8A40026A71F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CBDBBA4419CAC8A40026A71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CBDBBA4619CAC8A40026A71F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CBDBBA4719CAC8A40026A71F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CBDBBA4919CAC8A40026A71F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBDBBA4F19CAC8A40026A71F /* 即时通讯Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "即时通讯Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBBA5019CAC8A40026A71F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CBDBBA5819CAC8A40026A71F /* 即时通讯Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "即时通讯Tests-Info.plist"; sourceTree = "<group>"; };
 		CBDBBA5A19CAC8A40026A71F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBDBBA5C19CAC8A40026A71F /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
-		CBDBBA6A19CAC91F0026A71F /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		CBDBBA6B19CAC91F0026A71F /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		CBDBBA6C19CAC91F0026A71F /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		CBDBBA6D19CAC91F0026A71F /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		CBDBBA6E19CAC91F0026A71F /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		CBDBBA6F19CAC91F0026A71F /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		CBDBBA7019CAC91F0026A71F /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		CBDBBA7119CAC91F0026A71F /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		CBDBBA7219CAC91F0026A71F /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		CBDBBA7319CAC91F0026A71F /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
-		CBDBBA7519CAC91F0026A71F /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		CBDBBA7619CAC91F0026A71F /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		CBDBBA7719CAC91F0026A71F /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		CBDBBA7819CAC91F0026A71F /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		CBDBBA7919CAC91F0026A71F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CBDBBA8319CAC9520026A71F /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		CBDBBA8419CAC9520026A71F /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		CBDBBA8619CAC9600026A71F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -485,6 +487,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB10863619CAFFA300EF2C13 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				CB10863819CAFFB600EF2C13 /* Main.storyboard */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		CB10863719CAFFA300EF2C13 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CB10863A19CAFFBE00EF2C13 /* Login.storyboard */,
+				CB10863C19CB02CF00EF2C13 /* LoginViewController.h */,
+				CB10863D19CB02CF00EF2C13 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CB724F8719CAD6AB001A6298 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				CB724F8819CAD6AB001A6298 /* DDAbstractDatabaseLogger.h */,
+				CB724F8919CAD6AB001A6298 /* DDAbstractDatabaseLogger.m */,
+				CB724F8A19CAD6AB001A6298 /* DDASLLogger.h */,
+				CB724F8B19CAD6AB001A6298 /* DDASLLogger.m */,
+				CB724F8C19CAD6AB001A6298 /* DDFileLogger.h */,
+				CB724F8D19CAD6AB001A6298 /* DDFileLogger.m */,
+				CB724F8E19CAD6AB001A6298 /* DDLog.h */,
+				CB724F8F19CAD6AB001A6298 /* DDLog.m */,
+				CB724F9019CAD6AB001A6298 /* DDTTYLogger.h */,
+				CB724F9119CAD6AB001A6298 /* DDTTYLogger.m */,
+				CB724F9219CAD6AB001A6298 /* Extensions */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		CB724F9219CAD6AB001A6298 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB724F9319CAD6AB001A6298 /* ContextFilterLogFormatter.h */,
+				CB724F9419CAD6AB001A6298 /* ContextFilterLogFormatter.m */,
+				CB724F9519CAD6AB001A6298 /* DispatchQueueLogFormatter.h */,
+				CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */,
+				CB724F9719CAD6AB001A6298 /* README.txt */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CBDBBA2519CAC8A40026A71F = {
 			isa = PBXGroup;
 			children = (
@@ -522,12 +572,11 @@
 		CBDBBA3719CAC8A40026A71F /* 即时通讯 */ = {
 			isa = PBXGroup;
 			children = (
+				CB10863619CAFFA300EF2C13 /* IM */,
+				CB10863719CAFFA300EF2C13 /* Login */,
 				CBDBBA6619CAC9060026A71F /* Libs */,
 				CBDBBA4019CAC8A40026A71F /* AppDelegate.h */,
 				CBDBBA4119CAC8A40026A71F /* AppDelegate.m */,
-				CBDBBA4319CAC8A40026A71F /* Main.storyboard */,
-				CBDBBA4619CAC8A40026A71F /* ViewController.h */,
-				CBDBBA4719CAC8A40026A71F /* ViewController.m */,
 				CBDBBA4919CAC8A40026A71F /* Images.xcassets */,
 				CBDBBA3819CAC8A40026A71F /* Supporting Files */,
 			);
@@ -588,42 +637,12 @@
 		CBDBBA6819CAC9060026A71F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				CB724F8719CAD6AB001A6298 /* CocoaLumberjack */,
 				CBDBBA9D19CACA210026A71F /* libidn */,
 				CBDBBA8A19CAC9720026A71F /* KissXML */,
 				CBDBBA8219CAC9520026A71F /* CocoaAsyncSocket */,
-				CBDBBA6919CAC91F0026A71F /* CocoaLumberjack */,
 			);
 			path = Vender;
-			sourceTree = "<group>";
-		};
-		CBDBBA6919CAC91F0026A71F /* CocoaLumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				CBDBBA6A19CAC91F0026A71F /* DDAbstractDatabaseLogger.h */,
-				CBDBBA6B19CAC91F0026A71F /* DDAbstractDatabaseLogger.m */,
-				CBDBBA6C19CAC91F0026A71F /* DDASLLogger.h */,
-				CBDBBA6D19CAC91F0026A71F /* DDASLLogger.m */,
-				CBDBBA6E19CAC91F0026A71F /* DDFileLogger.h */,
-				CBDBBA6F19CAC91F0026A71F /* DDFileLogger.m */,
-				CBDBBA7019CAC91F0026A71F /* DDLog.h */,
-				CBDBBA7119CAC91F0026A71F /* DDLog.m */,
-				CBDBBA7219CAC91F0026A71F /* DDTTYLogger.h */,
-				CBDBBA7319CAC91F0026A71F /* DDTTYLogger.m */,
-				CBDBBA7419CAC91F0026A71F /* Extensions */,
-			);
-			path = CocoaLumberjack;
-			sourceTree = "<group>";
-		};
-		CBDBBA7419CAC91F0026A71F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CBDBBA7519CAC91F0026A71F /* ContextFilterLogFormatter.h */,
-				CBDBBA7619CAC91F0026A71F /* ContextFilterLogFormatter.m */,
-				CBDBBA7719CAC91F0026A71F /* DispatchQueueLogFormatter.h */,
-				CBDBBA7819CAC91F0026A71F /* DispatchQueueLogFormatter.m */,
-				CBDBBA7919CAC91F0026A71F /* README.txt */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CBDBBA8219CAC9520026A71F /* CocoaAsyncSocket */ = {
@@ -1433,9 +1452,10 @@
 			files = (
 				CBDBBAA219CACA210026A71F /* build-libidn.sh in Resources */,
 				CBDBBA4A19CAC8A40026A71F /* Images.xcassets in Resources */,
+				CB10863B19CAFFBE00EF2C13 /* Login.storyboard in Resources */,
 				CBDBBA3C19CAC8A40026A71F /* InfoPlist.strings in Resources */,
-				CBDBBA8119CAC91F0026A71F /* README.txt in Resources */,
-				CBDBBA4519CAC8A40026A71F /* Main.storyboard in Resources */,
+				CB10863919CAFFB600EF2C13 /* Main.storyboard in Resources */,
+				CB724F9F19CAD6AB001A6298 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1464,7 +1484,6 @@
 				CBDBBC0C19CACA920026A71F /* XMPPvCardTemp.m in Sources */,
 				CBDBBC0D19CACA920026A71F /* XMPPvCardTempAdr.m in Sources */,
 				CBDBBC1919CACA920026A71F /* XMPPIQ+XEP_0066.m in Sources */,
-				CBDBBA7D19CAC91F0026A71F /* DDLog.m in Sources */,
 				CBDBBC0F19CACA920026A71F /* XMPPvCardTempBase.m in Sources */,
 				CBDBBBF819CACA920026A71F /* XMPPPrivacy.m in Sources */,
 				CBDBBAF319CACA3D0026A71F /* XMPPPresence.m in Sources */,
@@ -1479,8 +1498,6 @@
 				CBDBBAF819CACA3D0026A71F /* XMPPIDTracker.m in Sources */,
 				CBDBBC2F19CACA920026A71F /* XMPPMessageDeliveryReceipts.m in Sources */,
 				CBDBBC2019CACA920026A71F /* NSString+XEP_0106.m in Sources */,
-				CBDBBA7E19CAC91F0026A71F /* DDTTYLogger.m in Sources */,
-				CBDBBA4819CAC8A40026A71F /* ViewController.m in Sources */,
 				CBDBBBF319CACA920026A71F /* XMPPIQ+JabberRPC.m in Sources */,
 				CBDBBC2519CACA920026A71F /* XMPPCapabilities.m in Sources */,
 				CBDBBBFB19CACA920026A71F /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
@@ -1492,6 +1509,7 @@
 				CBDBBA9719CAC9720026A71F /* NSString+DDXML.m in Sources */,
 				CBDBBC2619CACA920026A71F /* XMPPMessageArchiving.xcdatamodeld in Sources */,
 				CBDBBC3619CACA920026A71F /* XEP_0223.m in Sources */,
+				CB724F9819CAD6AB001A6298 /* DDAbstractDatabaseLogger.m in Sources */,
 				CBDBBAEF19CACA3D0026A71F /* XMPPJID.m in Sources */,
 				CBDBBC1A19CACA920026A71F /* XMPPMessage+XEP_0066.m in Sources */,
 				CBDBBC2719CACA920026A71F /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
@@ -1508,7 +1526,6 @@
 				CBDBBC0619CACA920026A71F /* XMPPRoom.m in Sources */,
 				CBDBBBF419CACA920026A71F /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				CBDBBC2A19CACA920026A71F /* XMPPMessageArchiving.m in Sources */,
-				CBDBBA7C19CAC91F0026A71F /* DDFileLogger.m in Sources */,
 				CBDBBC0719CACA920026A71F /* XMPPvCard.xcdatamodeld in Sources */,
 				CBDBBC1E19CACA920026A71F /* XMPPSoftwareVersion.m in Sources */,
 				CBDBBC1519CACA920026A71F /* XMPPResultSet.m in Sources */,
@@ -1516,10 +1533,12 @@
 				CBDBBAF119CACA3D0026A71F /* XMPPModule.m in Sources */,
 				CBDBBAE319CACA3D0026A71F /* XMPPAnonymousAuthentication.m in Sources */,
 				CBDBBA9A19CAC9720026A71F /* DDXMLNode.m in Sources */,
+				CB724F9B19CAD6AB001A6298 /* DDLog.m in Sources */,
 				CBDBBBE619CACA920026A71F /* XMPPGoogleSharedStatus.m in Sources */,
 				CBDBBC2C19CACA920026A71F /* XMPPMessage+XEP_0172.m in Sources */,
 				CBDBBC1219CACA920026A71F /* XMPPvCardTempModule.m in Sources */,
 				CBDBBC2119CACA920026A71F /* XMPPCapabilities.xcdatamodel in Sources */,
+				CB724F9E19CAD6AB001A6298 /* DispatchQueueLogFormatter.m in Sources */,
 				CBDBBBF619CACA920026A71F /* XMPPIQ+LastActivity.m in Sources */,
 				CBDBBA4219CAC8A40026A71F /* AppDelegate.m in Sources */,
 				CBDBBAEB19CACA3D0026A71F /* NSNumber+XMPP.m in Sources */,
@@ -1530,6 +1549,7 @@
 				CBDBBC3019CACA920026A71F /* XMPPBlocking.m in Sources */,
 				CBDBBC3819CACA920026A71F /* XMPPMessage+XEP_0224.m in Sources */,
 				CBDBBBE819CACA920026A71F /* XMPPReconnect.m in Sources */,
+				CB724F9C19CAD6AB001A6298 /* DDTTYLogger.m in Sources */,
 				CBDBBAF619CACA3D0026A71F /* GCDMulticastDelegate.m in Sources */,
 				CBDBBC0119CACA920026A71F /* XMPPRoomMemoryStorage.m in Sources */,
 				CBDBBC3919CACA920026A71F /* NSXMLElement+XEP_0297.m in Sources */,
@@ -1539,13 +1559,14 @@
 				CBDBBC3B19CACA920026A71F /* XMPPMessage+XEP_0333.m in Sources */,
 				CBDBBC3A19CACA920026A71F /* XMPPMessage+XEP_0308.m in Sources */,
 				CBDBBC3319CACA920026A71F /* XMPPAutoTime.m in Sources */,
+				CB724F9919CAD6AB001A6298 /* DDASLLogger.m in Sources */,
 				CBDBBAEC19CACA3D0026A71F /* NSXMLElement+XMPP.m in Sources */,
 				CBDBBC3219CACA920026A71F /* XMPPPing.m in Sources */,
 				CBDBBAE619CACA3D0026A71F /* XMPPDigestMD5Authentication.m in Sources */,
+				CB724F9D19CAD6AB001A6298 /* ContextFilterLogFormatter.m in Sources */,
 				CBDBBC3419CACA920026A71F /* XMPPTime.m in Sources */,
 				CBDBBC1019CACA920026A71F /* XMPPvCardTempEmail.m in Sources */,
 				CBDBBC1F19CACA920026A71F /* XMPPTransports.m in Sources */,
-				CBDBBA8019CAC91F0026A71F /* DispatchQueueLogFormatter.m in Sources */,
 				CBDBBC3519CACA920026A71F /* NSXMLElement+XEP_0203.m in Sources */,
 				CBDBBAE419CACA3D0026A71F /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				CBDBBBF019CACA920026A71F /* XMPPUserMemoryStorageObject.m in Sources */,
@@ -1557,24 +1578,23 @@
 				CBDBBBE419CACA920026A71F /* XMPPBandwidthMonitor.m in Sources */,
 				CBDBBAE719CACA3D0026A71F /* XMPPPlainAuthentication.m in Sources */,
 				CBDBBAEA19CACA3D0026A71F /* NSData+XMPP.m in Sources */,
+				CB10863E19CB02CF00EF2C13 /* LoginViewController.m in Sources */,
 				CBDBBBFF19CACA920026A71F /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				CBDBBA9919CAC9720026A71F /* DDXMLElement.m in Sources */,
 				CBDBBC1819CACA920026A71F /* TURNSocket.m in Sources */,
 				CBDBBBF119CACA920026A71F /* XMPPRoster.m in Sources */,
 				CBDBBC3119CACA920026A71F /* XMPPAutoPing.m in Sources */,
 				CBDBBC2219CACA920026A71F /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
-				CBDBBA7A19CAC91F0026A71F /* DDAbstractDatabaseLogger.m in Sources */,
 				CBDBBC1619CACA920026A71F /* XMPPIQ+XEP_0060.m in Sources */,
 				CBDBBBFD19CACA920026A71F /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				CBDBBAF919CACA3D0026A71F /* XMPPSRVResolver.m in Sources */,
 				CBDBBA3E19CAC8A40026A71F /* main.m in Sources */,
 				CBDBBC1319CACA920026A71F /* XMPPvCardTempTel.m in Sources */,
 				CBDBBBF719CACA920026A71F /* XMPPLastActivity.m in Sources */,
-				CBDBBA7B19CAC91F0026A71F /* DDASLLogger.m in Sources */,
+				CB724F9A19CAD6AB001A6298 /* DDFileLogger.m in Sources */,
 				CBDBBAF519CACA3D0026A71F /* DDList.m in Sources */,
 				CBDBBC0919CACA920026A71F /* XMPPvCardCoreDataStorage.m in Sources */,
 				CBDBBA8519CAC9520026A71F /* GCDAsyncSocket.m in Sources */,
-				CBDBBA7F19CAC91F0026A71F /* ContextFilterLogFormatter.m in Sources */,
 				CBDBBC0219CACA920026A71F /* XMPPRoomMessageMemoryStorageObject.m in Sources */,
 				CBDBBC1D19CACA920026A71F /* XMPPMessage+XEP_0085.m in Sources */,
 				CBDBBAF419CACA3D0026A71F /* XMPPStream.m in Sources */,
@@ -1610,14 +1630,6 @@
 				CBDBBA3B19CAC8A40026A71F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CBDBBA4319CAC8A40026A71F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBDBBA4419CAC8A40026A71F /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		CBDBBA5919CAC8A40026A71F /* InfoPlist.strings */ = {
@@ -1663,7 +1675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1695,7 +1707,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1806,6 +1818,7 @@
 				CBDBBA6219CAC8A40026A71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBDBBA6319CAC8A40026A71F /* Build configuration list for PBXNativeTarget "即时通讯Tests" */ = {
 			isa = XCConfigurationList;
@@ -1814,6 +1827,7 @@
 				CBDBBA6519CAC8A40026A71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

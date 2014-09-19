@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="414-wg-igl">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Skg-qS-NXm">
+            <objects>
+                <viewController id="414-wg-igl" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RKh-jd-89v"/>
+                        <viewControllerLayoutGuide type="bottom" id="mKW-ht-7dc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q2I-ed-VKW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-pX-ddF">
+                                <rect key="frame" x="0.0" y="40" width="320" height="180"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户姓名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-qu-rgZ">
+                                        <rect key="frame" x="13" y="14" width="295" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZD-rw-rjF">
+                                        <rect key="frame" x="13" y="62" width="295" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入服务器名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N65-Yu-wR7">
+                                        <rect key="frame" x="13" y="100" width="295" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ss-x0-MgM">
+                                        <rect key="frame" x="36" y="138" width="104" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="注册" backgroundImage="LoginwhiteBtn">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-BY-fGq">
+                                        <rect key="frame" x="166" y="138" width="104" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="登录" backgroundImage="LoginGreenBigBtn">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="userLogin:" destination="414-wg-igl" eventType="touchUpInside" id="OA8-FD-hFM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="VZK-6d-hDZ"/>
+                                    <constraint firstAttribute="height" constant="180" id="gaf-ki-QxJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版权所有(c) 2013-2014 阿Q" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGy-7G-5Qp">
+                                <rect key="frame" x="0.0" y="220" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ve4-Ca-yNb"/>
+                                    <constraint firstAttribute="width" constant="320" id="WrL-rY-eGJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vrW-pX-ddF" firstAttribute="top" secondItem="RKh-jd-89v" secondAttribute="bottom" constant="20" id="8zX-bV-tXq"/>
+                            <constraint firstItem="hGy-7G-5Qp" firstAttribute="top" secondItem="vrW-pX-ddF" secondAttribute="bottom" id="D1H-Zb-fmo"/>
+                            <constraint firstAttribute="trailing" secondItem="vrW-pX-ddF" secondAttribute="trailing" id="hQf-n1-bQJ"/>
+                            <constraint firstItem="vrW-pX-ddF" firstAttribute="leading" secondItem="q2I-ed-VKW" secondAttribute="leading" id="ki3-OV-CTd"/>
+                            <constraint firstItem="hGy-7G-5Qp" firstAttribute="leading" secondItem="q2I-ed-VKW" secondAttribute="leading" id="vZY-xv-Cug"/>
+                            <constraint firstAttribute="trailing" secondItem="hGy-7G-5Qp" secondAttribute="trailing" id="wSZ-m3-B9y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hostnameText" destination="N65-Yu-wR7" id="Ozp-Rb-Kot"/>
+                        <outlet property="loginButton" destination="xe4-BY-fGq" id="Ie5-xN-D8C"/>
+                        <outlet property="passwordText" destination="AZD-rw-rjF" id="JoW-s3-xpC"/>
+                        <outlet property="registerButton" destination="4Ss-x0-MgM" id="9pV-Dw-rOE"/>
+                        <outlet property="topConstraint" destination="8zX-bV-tXq" id="RHp-ET-Abg"/>
+                        <outlet property="usernameText" destination="1PC-qu-rgZ" id="39u-Me-uah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3IS-mO-R8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LoginGreenBigBtn" width="21" height="47"/>
+        <image name="LoginwhiteBtn" width="21" height="47"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
