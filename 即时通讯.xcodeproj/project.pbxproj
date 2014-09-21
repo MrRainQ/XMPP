@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184C985B19CF1648005FDBF5 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C985A19CF1648005FDBF5 /* AddFriendViewController.m */; };
 		CB10863919CAFFB600EF2C13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB10863819CAFFB600EF2C13 /* Main.storyboard */; };
 		CB10863B19CAFFBE00EF2C13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB10863A19CAFFBE00EF2C13 /* Login.storyboard */; };
 		CB10863E19CB02CF00EF2C13 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB10863D19CB02CF00EF2C13 /* LoginViewController.m */; };
+		CB1875AB19CC4ADD001D7CD1 /* EditVCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1875A819CC4ADD001D7CD1 /* EditVCardViewController.m */; };
+		CB1875AC19CC4ADD001D7CD1 /* VCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1875AA19CC4ADD001D7CD1 /* VCardViewController.m */; };
+		CB1875AF19CC4BC3001D7CD1 /* RosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1875AE19CC4BC3001D7CD1 /* RosterViewController.m */; };
+		CB1875B119CC4C24001D7CD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1875B019CC4C24001D7CD1 /* CoreData.framework */; };
 		CB724F9819CAD6AB001A6298 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8919CAD6AB001A6298 /* DDAbstractDatabaseLogger.m */; };
 		CB724F9919CAD6AB001A6298 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8B19CAD6AB001A6298 /* DDASLLogger.m */; };
 		CB724F9A19CAD6AB001A6298 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F8D19CAD6AB001A6298 /* DDFileLogger.m */; };
@@ -19,7 +24,6 @@
 		CB724F9E19CAD6AB001A6298 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB724F9619CAD6AB001A6298 /* DispatchQueueLogFormatter.m */; };
 		CB724F9F19CAD6AB001A6298 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB724F9719CAD6AB001A6298 /* README.txt */; };
 		CBB4F1A019CBCF52001BF2C2 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */; };
-		CBB4F1A519CBFA35001BF2C2 /* VCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB4F1A419CBFA35001BF2C2 /* VCardViewController.m */; };
 		CBDBBA3219CAC8A40026A71F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3119CAC8A40026A71F /* Foundation.framework */; };
 		CBDBBA3419CAC8A40026A71F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3319CAC8A40026A71F /* CoreGraphics.framework */; };
 		CBDBBA3619CAC8A40026A71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBBA3519CAC8A40026A71F /* UIKit.framework */; };
@@ -169,10 +173,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184C985919CF1648005FDBF5 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		184C985A19CF1648005FDBF5 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		CB10863819CAFFB600EF2C13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CB10863A19CAFFBE00EF2C13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CB10863C19CB02CF00EF2C13 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CB10863D19CB02CF00EF2C13 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CB1875A719CC4ADD001D7CD1 /* EditVCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditVCardViewController.h; sourceTree = "<group>"; };
+		CB1875A819CC4ADD001D7CD1 /* EditVCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditVCardViewController.m; sourceTree = "<group>"; };
+		CB1875A919CC4ADD001D7CD1 /* VCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCardViewController.h; sourceTree = "<group>"; };
+		CB1875AA19CC4ADD001D7CD1 /* VCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCardViewController.m; sourceTree = "<group>"; };
+		CB1875AD19CC4BC3001D7CD1 /* RosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosterViewController.h; sourceTree = "<group>"; };
+		CB1875AE19CC4BC3001D7CD1 /* RosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosterViewController.m; sourceTree = "<group>"; };
+		CB1875B019CC4C24001D7CD1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CB724F8819CAD6AB001A6298 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		CB724F8919CAD6AB001A6298 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		CB724F8A19CAD6AB001A6298 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -190,8 +203,6 @@
 		CB724F9719CAD6AB001A6298 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CBB4F19E19CBCF52001BF2C2 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		CBB4F19F19CBCF52001BF2C2 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
-		CBB4F1A319CBFA35001BF2C2 /* VCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCardViewController.h; sourceTree = "<group>"; };
-		CBB4F1A419CBFA35001BF2C2 /* VCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCardViewController.m; sourceTree = "<group>"; };
 		CBB4F1E119CBFEC3001BF2C2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CBDBBA2E19CAC8A40026A71F /* 即时通讯.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "即时通讯.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDBBA3119CAC8A40026A71F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -470,6 +481,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1875B119CC4C24001D7CD1 /* CoreData.framework in Frameworks */,
 				CBDBBAFC19CACA5F0026A71F /* libresolv.dylib in Frameworks */,
 				CBDBBAA319CACA210026A71F /* libidn.a in Frameworks */,
 				CBDBBA9C19CAC9920026A71F /* libxml2.dylib in Frameworks */,
@@ -498,8 +510,11 @@
 			isa = PBXGroup;
 			children = (
 				CB10863819CAFFB600EF2C13 /* Main.storyboard */,
-				CBB4F1A319CBFA35001BF2C2 /* VCardViewController.h */,
-				CBB4F1A419CBFA35001BF2C2 /* VCardViewController.m */,
+				CB1875A619CC4ADD001D7CD1 /* 个人名片 */,
+				CB1875AD19CC4BC3001D7CD1 /* RosterViewController.h */,
+				CB1875AE19CC4BC3001D7CD1 /* RosterViewController.m */,
+				184C985919CF1648005FDBF5 /* AddFriendViewController.h */,
+				184C985A19CF1648005FDBF5 /* AddFriendViewController.m */,
 			);
 			path = IM;
 			sourceTree = "<group>";
@@ -512,6 +527,17 @@
 				CB10863D19CB02CF00EF2C13 /* LoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CB1875A619CC4ADD001D7CD1 /* 个人名片 */ = {
+			isa = PBXGroup;
+			children = (
+				CB1875A719CC4ADD001D7CD1 /* EditVCardViewController.h */,
+				CB1875A819CC4ADD001D7CD1 /* EditVCardViewController.m */,
+				CB1875A919CC4ADD001D7CD1 /* VCardViewController.h */,
+				CB1875AA19CC4ADD001D7CD1 /* VCardViewController.m */,
+			);
+			path = "个人名片";
 			sourceTree = "<group>";
 		};
 		CB724F8719CAD6AB001A6298 /* CocoaLumberjack */ = {
@@ -575,6 +601,7 @@
 		CBDBBA3019CAC8A40026A71F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB1875B019CC4C24001D7CD1 /* CoreData.framework */,
 				CBDBBAFB19CACA5F0026A71F /* libresolv.dylib */,
 				CBDBBA9B19CAC9920026A71F /* libxml2.dylib */,
 				CBDBBA8819CAC9680026A71F /* CFNetwork.framework */,
@@ -1495,6 +1522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDBBAEE19CACA3D0026A71F /* XMPPIQ.m in Sources */,
+				CB1875AB19CC4ADD001D7CD1 /* EditVCardViewController.m in Sources */,
 				CBDBBC2919CACA920026A71F /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				CBDBBC0E19CACA920026A71F /* XMPPvCardTempAdrTypes.m in Sources */,
 				CBDBBBFE19CACA920026A71F /* XMPPRoomHybridStorage.m in Sources */,
@@ -1537,6 +1565,7 @@
 				CBDBBBFA19CACA920026A71F /* XMPPRoomCoreDataStorage.m in Sources */,
 				CBDBBBEB19CACA920026A71F /* XMPPRoster.xcdatamodel in Sources */,
 				CBDBBBEA19CACA920026A71F /* XMPPResourceCoreDataStorageObject.m in Sources */,
+				184C985B19CF1648005FDBF5 /* AddFriendViewController.m in Sources */,
 				CBDBBBEC19CACA920026A71F /* XMPPRosterCoreDataStorage.m in Sources */,
 				CBDBBAFA19CACA3D0026A71F /* XMPPStringPrep.m in Sources */,
 				CBDBBC1419CACA920026A71F /* NSXMLElement+XEP_0059.m in Sources */,
@@ -1544,6 +1573,7 @@
 				CBDBBAE819CACA3D0026A71F /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				CBDBBBEF19CACA920026A71F /* XMPPRosterMemoryStorage.m in Sources */,
 				CBDBBC0619CACA920026A71F /* XMPPRoom.m in Sources */,
+				CB1875AF19CC4BC3001D7CD1 /* RosterViewController.m in Sources */,
 				CBDBBBF419CACA920026A71F /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				CBDBBC2A19CACA920026A71F /* XMPPMessageArchiving.m in Sources */,
 				CBDBBC0719CACA920026A71F /* XMPPvCard.xcdatamodeld in Sources */,
@@ -1593,6 +1623,7 @@
 				CBDBBAF719CACA3D0026A71F /* RFImageToDataTransformer.m in Sources */,
 				CBDBBBF519CACA920026A71F /* XMPPJabberRPCModule.m in Sources */,
 				CBDBBC1719CACA920026A71F /* XMPPPubSub.m in Sources */,
+				CB1875AC19CC4ADD001D7CD1 /* VCardViewController.m in Sources */,
 				CBDBBC1C19CACA920026A71F /* XMPPDateTimeProfiles.m in Sources */,
 				CBDBBC2419CACA920026A71F /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
 				CBDBBBE419CACA920026A71F /* XMPPBandwidthMonitor.m in Sources */,
@@ -1607,7 +1638,6 @@
 				CBDBBC2219CACA920026A71F /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				CBDBBC1619CACA920026A71F /* XMPPIQ+XEP_0060.m in Sources */,
 				CBDBBBFD19CACA920026A71F /* XMPPRoomHybrid.xcdatamodeld in Sources */,
-				CBB4F1A519CBFA35001BF2C2 /* VCardViewController.m in Sources */,
 				CBDBBAF919CACA3D0026A71F /* XMPPSRVResolver.m in Sources */,
 				CBDBBA3E19CAC8A40026A71F /* main.m in Sources */,
 				CBDBBC1319CACA920026A71F /* XMPPvCardTempTel.m in Sources */,

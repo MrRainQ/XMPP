@@ -29,7 +29,10 @@ typedef void(^LoginFailedBlock)(kLoginErrorType type);
     XMPPStream属性的修改，仅能在AppDelegate中进行，其他调用方只能使用，不能修改，从而保证XMPPStream的安全
  */
 @property (nonatomic,strong,readonly) XMPPStream *xmppStream;
-
+@property (nonatomic,strong,readonly) XMPPvCardTempModule *xmppvCardTempModule;
+@property (nonatomic,strong,readonly) XMPPvCardAvatarModule *xmppvCardAvatarModule;
+@property (nonatomic, strong, readonly) XMPPRoster *xmppRoster;
+@property (nonatomic, strong, readonly) XMPPRosterCoreDataStorage *xmppRosterCoreDataStorage;
 /**
  *  注册用户标记
  */

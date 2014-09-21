@@ -11,7 +11,6 @@
 #define kMainStroyboardName     @"Main"
 #define kLoginStoryboardName    @"Login"
 
-
 // 赋值语句不能够写在.h中，只能写在.m中
 // 使用此种方式，可以保证常量字符串在内存中有且仅有一个地址
 NSString * const kXMPPLoginUserNameKey = @"xmppUserName";
@@ -21,12 +20,19 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
 
 @interface AppDelegate()<XMPPStreamDelegate>
 {
-    LoginFailedBlock _faildBlock;
+    LoginFailedBlock   _faildBlock;
+    XMPPReconnect      *_xmppReconnect;                     // 重新连接的模块
+    XMPPvCardCoreDataStorage *_xmppvCardCoreDataStorage;    // 电子名片数据存储扩展
 }
 /**
  *  设置XMPPStream
  */
 - (void)setupXmppStream;
+
+/**
+ *  释放XMPPStream
+ */
+- (void)teardownXmppStream;
 
 /**
  *  连接到服务器
@@ -72,7 +78,7 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
     });
     
 }
-
+#pragma mark - AppDelegate代理方法
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // 实例化window
@@ -98,6 +104,25 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [self connect];
+}
+
+// 应用程序收到来自系统的内存警告时调用
+// applicationDidReceiveMemoryWarning默认会做什么？
+// 野指针？ 指向一块已经被销毁的内存地址
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    // 安全释放
+    //    NSString *str = [[NSString alloc] init];
+    //    str = nil;
+    // weak assign
+    // weak关键字，在对象被释放后，自动将指针指向nil，而assign不会
+}
+
+// 系统退出到后台，如果内存不足，系统会自动调用AppDelegate的dealloc方法
+// 可以在此方法中，做内存清理工作
+- (void)dealloc
+{
+    [self teardownXmppStream];
 }
 
 #pragma mark - 成员方法
@@ -126,11 +151,55 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
     // 1. 实例化
     _xmppStream = [[XMPPStream alloc]init];
     
-    // 2. 设置代理
+    // 2. 实例化要扩展的模块
+    // 1> 重新连接
+    _xmppReconnect = [[XMPPReconnect alloc]init];
+    
+    // 2> 电子名片
+    _xmppvCardCoreDataStorage = [XMPPvCardCoreDataStorage sharedInstance];
+    _xmppvCardTempModule = [[XMPPvCardTempModule alloc]initWithvCardStorage:_xmppvCardCoreDataStorage];
+    _xmppvCardAvatarModule = [[XMPPvCardAvatarModule alloc]initWithvCardTempModule:_xmppvCardTempModule];
+    
+    _xmppRosterCoreDataStorage = [[XMPPRosterCoreDataStorage alloc]init];
+    _xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:_xmppRosterCoreDataStorage];
+    
+    // 3> 激活扩展模块
+    [_xmppReconnect activate:_xmppStream];
+    [_xmppvCardTempModule activate:_xmppStream];
+    [_xmppvCardAvatarModule activate:_xmppStream];
+    [_xmppRoster activate:_xmppStream];
+    
+    // 4. 设置代理
     // 提示：使用类似框架时，包括看网络开源代码，大多数会使用dispatch_get_main)queue()
     // 使用主线程队列通常不容易出错，自己开发时，一定要用多线程
-    // 一旦出问题，通常是UI更新问题，此时对于理解多线程的工作非常有帮助
+    // 一旦出问题，通常 UI更新问题，此时对于理解多线程的工作非常有帮助
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
+}
+
+- (void)teardownXmppStream
+{
+    // 在做内存清理工作的步骤，与实例化XMPPStream的工作刚好相反
+    // 1. 删除XMPPStream的代理
+    [_xmppStream removeDelegate:self];
+    
+    // 2. 断开XMPPStream的连接
+    [_xmppStream disconnect];
+    
+    // 3. 停止模块
+    [_xmppReconnect deactivate];
+    [_xmppvCardTempModule deactivate];
+    [_xmppvCardAvatarModule deactivate];
+    [_xmppRoster deactivate];
+    
+     // 4. 清理内存
+    _xmppReconnect = nil;
+    _xmppvCardCoreDataStorage = nil;
+    _xmppvCardTempModule = nil;
+    _xmppvCardAvatarModule = nil;
+    _xmppRosterCoreDataStorage = nil;
+    _xmppRoster = nil;
+    
+    _xmppStream = nil;
 }
 
 - (void)connect
@@ -256,6 +325,15 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
     [defaults removeObjectForKey:kXMPPLoginPasswordKey];
     [defaults removeObjectForKey:kXMPPLoginHostNameKey];
     [defaults synchronize];
+}
+
+#pragma mark -接收到其他用户的展现数据
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+{
+    // 通过跟踪发现
+    if ([presence.type isEqualToString:@"subscribe"]) {
+        [_xmppRoster acceptPresenceSubscriptionRequestFrom:presence.from andAddToRoster:YES];
+    }
 }
 
 @end
