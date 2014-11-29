@@ -9,11 +9,10 @@
 #import "RosterViewController.h"
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
-#import "ChatViewController.h"
-@interface RosterViewController ()<NSFetchedResultsControllerDelegate,UIAlertViewDelegate>
+
+@interface RosterViewController ()<NSFetchedResultsControllerDelegate>
 {
     NSFetchedResultsController *_fetchedResultsController;
-    XMPPJID                    *_toRemovedJID;
 }
 @end
 
@@ -39,7 +38,7 @@
     
     request.sortDescriptors = @[sort];
     
-    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:@"sectionNum" cacheName:nil];
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
     
     _fetchedResultsController.delegate = self;
     
@@ -54,13 +53,8 @@
 {
     NSString *identifier = segue.identifier;
     [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-    
-    if ([identifier isEqualToString:@"ChatSegue"]) {
-        NSIndexPath *indexPath = (NSIndexPath *)sender;
-        XMPPUserCoreDataStorageObject *user = [_fetchedResultsController objectAtIndexPath:indexPath];
+    if ([identifier isEqualToString:@"AddFriendSegue"]) {
         
-        ChatViewController *controller = segue.destinationViewController;
-        controller.bareJID = user.jid;
     }
 }
 
@@ -69,40 +63,6 @@
 {
     // 数据内容变化时，刷新表格数据
     [self.tableView reloadData];
-}
-
-
-
-#pragma mark - 数据源方法
-// 分组数量
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return _fetchedResultsController.sections.count;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    id<NSFetchedResultsSectionInfo> info = _fetchedResultsController.sections[section];
-    
-    int state = [[info name] intValue];
-    
-    NSString *title = nil;
-    switch (state) {
-        case 0:
-            title = @"在线";
-            break;
-        case 1:
-            title = @"离开";
-            break;
-        case 2:
-            title = @"离线";
-            break;
-        default:
-            title = @"未知";
-            break;
-            
-    }
-    return title;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -127,43 +87,9 @@
     XMPPUserCoreDataStorageObject *user = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = user.displayName;
     
-    cell.detailTextLabel.text = user.primaryResource.status;
-    
     return cell;
 }
 
-#pragma mark 表格代理方法
-#pragma mark 选中表格行
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"ChatSegue" sender:indexPath];
-}
-
-
-#pragma mark 表格代理方法
- -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // 判断修改表格的方式，是否为删除
-    if (UITableViewCellEditingStyleDelete == editingStyle) {
-        
-        XMPPUserCoreDataStorageObject *user = [_fetchedResultsController objectAtIndexPath:indexPath];
-        _toRemovedJID = user.jid;
-        NSString *msg = [NSString stringWithFormat:@"是否确认删除%@?",user.jid];
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
-        
-    }
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (1==buttonIndex) {
-        
-        [xmppDelegate.xmppRoster removeUser:_toRemovedJID];
-        
-        _toRemovedJID = nil;
-    }
-}
 
 
 @end

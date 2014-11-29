@@ -31,11 +31,8 @@ typedef void(^LoginFailedBlock)(kLoginErrorType type);
 @property (nonatomic,strong,readonly) XMPPStream *xmppStream;
 @property (nonatomic,strong,readonly) XMPPvCardTempModule *xmppvCardTempModule;
 @property (nonatomic,strong,readonly) XMPPvCardAvatarModule *xmppvCardAvatarModule;
-@property (nonatomic,strong,readonly) XMPPRoster *xmppRoster;
-@property (nonatomic,strong,readonly) XMPPRosterCoreDataStorage *xmppRosterCoreDataStorage;
-@property (nonatomic,strong,readonly) XMPPMessageArchiving *xmppMessageArchiving;
-@property (nonatomic,strong,readonly) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
-
+@property (nonatomic, strong, readonly) XMPPRoster *xmppRoster;
+@property (nonatomic, strong, readonly) XMPPRosterCoreDataStorage *xmppRosterCoreDataStorage;
 /**
  *  注册用户标记
  */

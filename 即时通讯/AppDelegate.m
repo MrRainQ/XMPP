@@ -160,20 +160,14 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
     _xmppvCardTempModule = [[XMPPvCardTempModule alloc]initWithvCardStorage:_xmppvCardCoreDataStorage];
     _xmppvCardAvatarModule = [[XMPPvCardAvatarModule alloc]initWithvCardTempModule:_xmppvCardTempModule];
     
-    // 3> 花名册
     _xmppRosterCoreDataStorage = [[XMPPRosterCoreDataStorage alloc]init];
     _xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:_xmppRosterCoreDataStorage];
     
-    // 4> 消息归档
-    _xmppMessageArchivingCoreDataStorage = [[XMPPMessageArchivingCoreDataStorage alloc]init];
-    _xmppMessageArchiving = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_xmppMessageArchivingCoreDataStorage];
-    
-    // 3. 激活扩展模块
+    // 3> 激活扩展模块
     [_xmppReconnect activate:_xmppStream];
     [_xmppvCardTempModule activate:_xmppStream];
     [_xmppvCardAvatarModule activate:_xmppStream];
     [_xmppRoster activate:_xmppStream];
-    [_xmppMessageArchiving activate:_xmppStream];
     
     // 4. 设置代理
     // 提示：使用类似框架时，包括看网络开源代码，大多数会使用dispatch_get_main)queue()
@@ -196,7 +190,6 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
     [_xmppvCardTempModule deactivate];
     [_xmppvCardAvatarModule deactivate];
     [_xmppRoster deactivate];
-    [_xmppMessageArchiving deactivate];
     
      // 4. 清理内存
     _xmppReconnect = nil;
@@ -206,14 +199,12 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
     _xmppRosterCoreDataStorage = nil;
     _xmppRoster = nil;
     
-    _xmppMessageArchivingCoreDataStorage = nil;
-    _xmppMessageArchiving = nil;
-    
     _xmppStream = nil;
 }
 
 - (void)connect
 {
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *hostName = [defaults stringForKey:kXMPPLoginHostNameKey];
     NSString *userName = [defaults stringForKey:kXMPPLoginUserNameKey];
@@ -223,6 +214,7 @@ NSString * const kXMPPLoginHostNameKey = @"xmppHostName";
         [self showStoryboardWithBoardName:kLoginStoryboardName];
         return;
     }
+    
     // 设置XMPPStream的hostName&JID
     _xmppStream.hostName  = hostName;
     _xmppStream.myJID = [XMPPJID jidWithUser:userName domain:hostName resource:nil];
