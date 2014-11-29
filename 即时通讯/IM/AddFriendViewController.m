@@ -18,6 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [_friendNameText becomeFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -48,6 +50,23 @@
     [xmppDelegate.xmppRoster subscribePresenceToUser:jid];
     
     // 3. 不能添加自己
+    if ([xmppDelegate.xmppStream.myJID.bare isEqualToString:friendText]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"不能添加自己" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        
+        return;
+    }
+    
+    // 4. 如果已经是好友，则无需添加
+    // 如果已经添加成好友，好友的信息会记录在本地数据库中
+    // 直接在本地数据库中查找该好友是否存在
+    if ([xmppDelegate.xmppRosterCoreDataStorage userExistsWithJID:jid xmppStream:xmppDelegate.xmppStream]){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"该好友已经存在，无需添加" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        
+        return;
+    };
+    
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"订阅请求已经发送" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alert show];
     

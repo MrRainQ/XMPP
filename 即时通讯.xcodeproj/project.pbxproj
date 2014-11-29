@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		184C985B19CF1648005FDBF5 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C985A19CF1648005FDBF5 /* AddFriendViewController.m */; };
+		184C989F19CF39BC005FDBF5 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C989E19CF39BC005FDBF5 /* ChatViewController.m */; };
 		CB10863919CAFFB600EF2C13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB10863819CAFFB600EF2C13 /* Main.storyboard */; };
 		CB10863B19CAFFBE00EF2C13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB10863A19CAFFBE00EF2C13 /* Login.storyboard */; };
 		CB10863E19CB02CF00EF2C13 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB10863D19CB02CF00EF2C13 /* LoginViewController.m */; };
@@ -175,6 +176,8 @@
 /* Begin PBXFileReference section */
 		184C985919CF1648005FDBF5 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
 		184C985A19CF1648005FDBF5 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		184C989D19CF39BC005FDBF5 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		184C989E19CF39BC005FDBF5 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		CB10863819CAFFB600EF2C13 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CB10863A19CAFFBE00EF2C13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CB10863C19CB02CF00EF2C13 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -515,6 +518,8 @@
 				CB1875AE19CC4BC3001D7CD1 /* RosterViewController.m */,
 				184C985919CF1648005FDBF5 /* AddFriendViewController.h */,
 				184C985A19CF1648005FDBF5 /* AddFriendViewController.m */,
+				184C989D19CF39BC005FDBF5 /* ChatViewController.h */,
+				184C989E19CF39BC005FDBF5 /* ChatViewController.m */,
 			);
 			path = IM;
 			sourceTree = "<group>";
@@ -1579,6 +1584,7 @@
 				CBDBBC0719CACA920026A71F /* XMPPvCard.xcdatamodeld in Sources */,
 				CBDBBC1E19CACA920026A71F /* XMPPSoftwareVersion.m in Sources */,
 				CBDBBC1519CACA920026A71F /* XMPPResultSet.m in Sources */,
+				184C989F19CF39BC005FDBF5 /* ChatViewController.m in Sources */,
 				CBDBBBF219CACA920026A71F /* XMPPSystemInputActivityMonitor.m in Sources */,
 				CBDBBAF119CACA3D0026A71F /* XMPPModule.m in Sources */,
 				CBDBBAE319CACA3D0026A71F /* XMPPAnonymousAuthentication.m in Sources */,
